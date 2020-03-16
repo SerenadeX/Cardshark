@@ -57,7 +57,7 @@ class ImageManager: ObservableObject {
                 
                 guard let tempURL = tempURL, let cacheDirectory = ImageManager.cacheDirectory else { return completion(nil) }
                 
-                let newURL = cacheDirectory.appendingPathComponent(id).appendingPathExtension(set.logoURL.pathExtension)
+                let newURL = cacheDirectory.appendingPathComponent(id).appendingPathExtension(imageURL.pathExtension)
                 do {
                     try FileManager.default.moveItem(at: tempURL, to: newURL)
                     let image = UIImage(contentsOfFile: newURL.path)
