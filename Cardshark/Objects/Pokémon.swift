@@ -92,6 +92,9 @@ struct Pokémon {
         let resistance: [StatAdjust]
         let weaknesses: [StatAdjust]
         
+        struct Root: Codable {
+            let cards: [Card]
+        }
         
         
     }

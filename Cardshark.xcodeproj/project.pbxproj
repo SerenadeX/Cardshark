@@ -19,6 +19,8 @@
 		59EE995E241FFE4500900416 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EE995D241FFE4500900416 /* ImageManager.swift */; };
 		59EE9961241FFF3E00900416 /* SetListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EE9960241FFF3E00900416 /* SetListView.swift */; };
 		59EE9963241FFFFD00900416 /* SetListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EE9962241FFFFD00900416 /* SetListViewModel.swift */; };
+		59EE9965242017EA00900416 /* CardCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EE9964242017EA00900416 /* CardCollectionView.swift */; };
+		59EE9967242017F400900416 /* CardCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EE9966242017F400900416 /* CardCollectionViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		59EE995D241FFE4500900416 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		59EE9960241FFF3E00900416 /* SetListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetListView.swift; sourceTree = "<group>"; };
 		59EE9962241FFFFD00900416 /* SetListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetListViewModel.swift; sourceTree = "<group>"; };
+		59EE9964242017EA00900416 /* CardCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionView.swift; sourceTree = "<group>"; };
+		59EE9966242017F400900416 /* CardCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +125,8 @@
 			children = (
 				59EE9960241FFF3E00900416 /* SetListView.swift */,
 				59EE9962241FFFFD00900416 /* SetListViewModel.swift */,
+				59EE9964242017EA00900416 /* CardCollectionView.swift */,
+				59EE9966242017F400900416 /* CardCollectionViewModel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -198,10 +204,12 @@
 			files = (
 				59EE995C241FFCAB00900416 /* DateFormatter.swift in Sources */,
 				593EEED8241FF18200034240 /* AppDelegate.swift in Sources */,
+				59EE9967242017F400900416 /* CardCollectionViewModel.swift in Sources */,
 				59EE995E241FFE4500900416 /* ImageManager.swift in Sources */,
 				59EE9963241FFFFD00900416 /* SetListViewModel.swift in Sources */,
 				593EEEDA241FF18200034240 /* SceneDelegate.swift in Sources */,
 				593EEEDC241FF18200034240 /* ContentView.swift in Sources */,
+				59EE9965242017EA00900416 /* CardCollectionView.swift in Sources */,
 				593EEEF4241FF6D100034240 /* Pokémon+API.swift in Sources */,
 				593EEEEF241FF1B700034240 /* Pokémon.swift in Sources */,
 				59EE9961241FFF3E00900416 /* SetListView.swift in Sources */,

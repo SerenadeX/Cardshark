@@ -16,6 +16,7 @@ class SetListViewModel: ObservableObject {
     func load() {
         Pokémon.API.getSets { sets in
             DispatchQueue.main.async {
+                dump(sets?.count)
                 self.sets = sets ?? self.sets
             }
         }

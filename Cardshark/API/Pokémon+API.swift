@@ -41,10 +41,7 @@ extension Pokémon {
                 if let error = error {
                     dump(error)
                     completion(nil)
-                }
-                
-                if let response = response {
-                    dump(response)
+                    return
                 }
                 
                 if let data = data {
@@ -59,10 +56,51 @@ extension Pokémon {
                     } catch {
                         dump(error)
                         completion(nil)
+                        return
                     }
                     
                 }
             }.resume()
+            
+        }
+        
+        static func getCards(for set: Set, pageSize: Int = 1000, completion: @escaping ([Card]?) -> Void) {
+            let url = baseURL.appendingPathComponent("/cards")
+            let queryParameters = [
+                URLQueryItem(name: "setCode", value: set.code),
+                URLQueryItem(name: "pageSize", value: "\(pageSize)")
+            ]
+            var components = URLComponents(url: url, resolvingAgainstBaseURL: false)!
+            components.queryItems = queryParameters
+            let newURL = components.url!
+            let request = URLRequest(url: newURL)
+            
+            URLSession.shared.dataTask(with: request) { data, response, error in
+                if let error = error {
+                    dump(error)
+                    completion(nil)
+                    return
+                }
+                
+                if let data = data {
+                    let dumpString = false
+                    if dumpString {
+                        dump(String(data: data, encoding: .utf8))
+                    }
+                    
+                    do {
+                        let root = try JSONDecoder().decode(Card.Root.self, from: data)
+                        completion(root.cards)
+                    } catch {
+                        dump(error)
+                        completion(nil)
+                        return
+                    }
+                    
+                }
+                
+            }
+            
             
         }
         
